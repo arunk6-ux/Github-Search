@@ -44,7 +44,7 @@ search()
   else
   {
   console.log(this.username);
-  this.http.get( " https://api.github.com/users/" + this.username+'?access_token=8c76d6c09facaf4a63cfa09b69d71deccbce5a1b').subscribe(userDetail =>{
+  this.http.get( " https://api.github.com/users/" + this.username).subscribe(userDetail =>{
     this.response =userDetail;
     console.log(this.response);
     localStorage.setItem(this.username,JSON.stringify(this.response));
